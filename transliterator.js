@@ -252,24 +252,6 @@ function buildSidebar() {
 				"ч",
 			]),
 		},
-		{
-			title: "Заимствованные",
-			items: filterGraphs([
-				"в",
-				"ж",
-				"з",
-				"ф",
-				"ц",
-				"ш",
-				"щ",
-				"е",
-				"ё",
-				"ю",
-				"я",
-				"ъ",
-				"ь",
-			]),
-		},
 	];
 
 	for (const s of sections) {
