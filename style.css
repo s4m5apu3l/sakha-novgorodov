@@ -380,6 +380,10 @@ footer a:hover {
   background: var(--novg-special);
 }
 
+.mobile-letters {
+  display: none;
+}
+
 .hidden {
   display: none;
 }
@@ -387,6 +391,15 @@ footer a:hover {
 @media (max-width: 720px) {
   .layout {
     grid-template-columns: 1fr;
+  }
+
+  .mobile-letters {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .sidebar .letters-section {
+    display: none;
   }
 
   .sidebar {

@@ -165,25 +165,7 @@ function escapeHtml(s) {
 function buildSidebar() {
 	let html = "";
 
-	html += `<div class="table-section"><h3>дифтонги </h3>`;
-	html += `<div class="alphabet-grid">`;
-	for (const d of diphthongs) {
-		html += `<span class="letter special clickable" onclick="insertAtCursor('${d.cyr}')" title="${d.cyr} → ${d.novg}">${d.novg}</span>`;
-	}
-	html += `</div></div>`;
-
-	html += `<div class="table-section"><h3>Саха буукубалара</h3>`;
-	html += `<div class="alphabet-grid">`;
-	for (const l of yakutLetters) {
-		html += `<span class="letter special clickable" onclick="insertAtCursor('${l.cyr}')" title="${l.cyr} → ${l.novg}">${l.cyr}</span>`;
-	}
-	html += `</div></div>`;
-
-	html += `<div class="alphabet-grid">`;
-	for (const g of specialGraphs) {
-		html += `<span class="letter special clickable" onclick="insertAtCursor('${g.cyr}')" title="${g.cyr} → ${g.novg}">${g.cyr}</span>`;
-	}
-	html += `</div></div>`;
+	html += buildLettersSection();
 
 	const sections = [
 		{
@@ -223,6 +205,32 @@ function buildSidebar() {
 			.join("");
 		html += `<div class="table-section"><h3>${s.title}</h3><table><tbody>${rows}</tbody></table></div>`;
 	}
+
+	return html;
+}
+
+function buildLettersSection() {
+	let html = "";
+
+	html += `<div class="table-section letters-section"><h3>дифтонги</h3>`;
+	html += `<div class="alphabet-grid">`;
+	for (const d of diphthongs) {
+		html += `<span class="letter special clickable" onclick="insertAtCursor('${d.cyr}')" title="${d.cyr} → ${d.novg}">${d.novg}</span>`;
+	}
+	html += `</div></div>`;
+
+	html += `<div class="table-section letters-section"><h3>Саха буукубалара</h3>`;
+	html += `<div class="alphabet-grid">`;
+	for (const l of yakutLetters) {
+		html += `<span class="letter special clickable" onclick="insertAtCursor('${l.cyr}')" title="${l.cyr} → ${l.novg}">${l.cyr}</span>`;
+	}
+	html += `</div></div>`;
+
+	html += `<div class="alphabet-grid letters-section">`;
+	for (const g of specialGraphs) {
+		html += `<span class="letter special clickable" onclick="insertAtCursor('${g.cyr}')" title="${g.cyr} → ${g.novg}">${g.cyr}</span>`;
+	}
+	html += `</div>`;
 
 	return html;
 }
@@ -274,5 +282,6 @@ function onPaste() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("graph-table").innerHTML = buildSidebar();
+	document.getElementById("mobile-letters").innerHTML = buildLettersSection();
 	document.getElementById("input").addEventListener("input", onInput);
 });
