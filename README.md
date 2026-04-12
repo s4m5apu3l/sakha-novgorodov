@@ -1,4 +1,4 @@
-# Sudurgu Saqa Latin Transliterator
+<img src="sakha-flag.svg" width="48" alt="Флаг Саха" /> Sudurgu Saqa Latin Transliterator
 
 Транслитератор саха тыла (якутского языка) из кириллицы в алфавит С.А. Новгородова (1917).
 

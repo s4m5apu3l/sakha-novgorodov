@@ -48,6 +48,15 @@ header h1 {
   font-weight: 600;
   color: #eee;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag-icon {
+  vertical-align: middle;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 header p {
