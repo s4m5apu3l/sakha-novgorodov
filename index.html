@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sah">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Новгородов алфавит — Транслитератор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Новгородов алфавит</h1>
+        <p>Транслитерация саха тыла кириллицаттан Новгородов алфавитыгар</p>
+      </header>
+
+      <div class="layout">
+        <div class="io">
+          <div class="field">
+            <label for="input">Кириллица</label>
+            <textarea
+              id="input"
+              placeholder="Суруйунуохтун..."
+              autofocus
+            ></textarea>
+            <div class="bar">
+              <div class="bar-left">
+                <span id="char-count">0</span> abc
+                <button onclick="onPaste()">Вставить</button>
+                <button onclick="onClear()">Очистить</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sep">↓</div>
+
+          <div class="field">
+            <label>Новгородов</label>
+            <div class="output-box" id="output"></div>
+            <div class="bar">
+              <div class="bar-left">
+                <div class="legend">
+                  <span class="legend-item"><span class="legend-dot single"></span>граф</span>
+                  <span class="legend-item"><span class="legend-dot digraph"></span>диграф</span>
+                </div>
+              </div>
+              <button id="copy-btn" onclick="onCopy()">Копировать</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="sidebar" id="graph-table"></aside>
+      </div>
+
+      <textarea id="output-plain" class="hidden"></textarea>
+    </main>
+
+    <footer>
+      <p>Данные не собираются. <a href="https://github.com/varie/sakha-transliterator" target="_blank" rel="noreferrer">Исходный код</a></p>
+    </footer>
+
+    <script src="./transliterator.js"></script>
+  </body>
+</html>
