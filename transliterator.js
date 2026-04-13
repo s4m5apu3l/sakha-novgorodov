@@ -87,11 +87,11 @@ const diphthongs = [
 ];
 
 const yakutLetters = [
-	{ cyr: "ҥ", novg: "ŋ" },
-	{ cyr: "ҕ", novg: "ʃ" },
-	{ cyr: "ө", novg: "ꭢ" },
 	{ cyr: "һ", novg: "h" },
+	{ cyr: "ө", novg: "ꭢ" },
+	{ cyr: "ҕ", novg: "ʃ" },
 	{ cyr: "ү", novg: "y" },
+	{ cyr: "ҥ", novg: "ŋ" },
 ];
 
 const specialGraphs = [
