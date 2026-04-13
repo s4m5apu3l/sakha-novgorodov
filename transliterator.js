@@ -80,10 +80,10 @@ const graphs = {
 };
 
 const diphthongs = [
-	{ cyr: "ыа", novg: "ꭠ" },
-	{ cyr: "иэ", novg: "ꭡ" },
-	{ cyr: "уо", novg: "ꭣ" },
-	{ cyr: "үө", novg: "w" },
+	{ cyr: "ыа", novg: "ɯa" },
+	{ cyr: "иэ", novg: "ie" },
+	{ cyr: "уо", novg: "uɔ" },
+	{ cyr: "үө", novg: "yꭢ" },
 ];
 
 const yakutLetters = [
@@ -215,7 +215,7 @@ function buildLettersSection() {
 	html += `<div class="table-section letters-section"><h3>дифтонги</h3>`;
 	html += `<div class="alphabet-grid">`;
 	for (const d of diphthongs) {
-		html += `<span class="letter special clickable" onclick="insertAtCursor('${d.cyr}')" title="${d.cyr} → ${d.novg}">${d.novg}</span>`;
+		html += `<span class="letter special clickable" onclick="insertAtCursor('${d.cyr}')" title="${d.cyr} → ${d.novg}">${d.cyr}</span>`;
 	}
 	html += `</div></div>`;
 
